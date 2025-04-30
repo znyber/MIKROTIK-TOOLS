@@ -42,13 +42,18 @@ Aplikasi monitoring dan keamanan untuk router Mikrotik berbasis PHP.
 4. **Akses Aplikasi**
    Buka browser web dan arahkan ke:
    ```
-   http://localhost/h4n5vs/
+   http://localhost/MIKROTIK-TOOLS/
    ```
    atau URL yang sesuai dengan konfigurasi server Anda.
 
 5. **Login ke Aplikasi**
    - Username: admin
-   - Password: admin123
+   - Password: h4n5vs
+     ================ atau Pilih mode demo
+     untuk uji server ke mikrotik
+     '''
+     http://localhost/MIKROTIK-TOOLS/test_mikrotik_connection.php
+     ''' 
 
 6. **Konfigurasi Router Mikrotik**
    Masukkan detail router Mikrotik Anda:

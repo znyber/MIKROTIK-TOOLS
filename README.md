@@ -45,8 +45,9 @@ Aplikasi monitoring dan keamanan untuk router Mikrotik berbasis PHP.
    http://localhost/MIKROTIK-TOOLS/
    ```
    atau URL yang sesuai dengan konfigurasi server Anda.
+   configurasi Database : http://localhost/MIKROTIK-TOOLS/mysql_setup.php
 
-5. **Login ke Aplikasi**
+6. **Login ke Aplikasi**
    - Username: admin
    - Password: h4n5vs
      ================ atau Pilih mode demo
@@ -55,7 +56,7 @@ Aplikasi monitoring dan keamanan untuk router Mikrotik berbasis PHP.
      http://localhost/MIKROTIK-TOOLS/test_mikrotik_connection.php
      ''' 
 
-6. **Konfigurasi Router Mikrotik**
+7. **Konfigurasi Router Mikrotik**
    Masukkan detail router Mikrotik Anda:
    - IP Address
    - Username

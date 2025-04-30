@@ -22,7 +22,7 @@ Aplikasi monitoring dan keamanan untuk router Mikrotik berbasis PHP.
 
 1. **Unduh atau Clone Repository**
    ```
-   git clone https://github.com/username/h4n5vs-mikrotik-security.git](https://github.com/h4n5v5x/MIKROTIK-TOOLS
+   git clone https://github.com/h4n5v5x/MIKROTIK-TOOLS.git 
    ```
    atau ekstrak arsip ZIP ke direktori web server Anda.
 

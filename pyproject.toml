@@ -1,7 +1,7 @@
 [project]
 name = "H4N5VS TOOL "
 version = "0.1.0"
-description = "AMIKROTIK TOOL "
+description = "AMIKROTIK TOOL  UNTUK API OPEN AI MENGANALISA JARINGAN "
 requires-python = ">=3.11"
 dependencies = [
     "openai>=1.76.1",

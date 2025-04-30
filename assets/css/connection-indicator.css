@@ -1,0 +1,172 @@
+/* Connection Status Indicator Styles */
+.connection-status-container {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-right: 15px;
+    transition: all 0.3s ease;
+}
+
+.connection-status-icon {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.router-icon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s ease;
+}
+
+.router-icon.active {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.signal-waves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.signal-wave-1,
+.signal-wave-2,
+.signal-wave-3 {
+    position: absolute;
+    border: 2px solid #4CAF50;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: wave-animation 2s infinite;
+}
+
+.signal-wave-1 {
+    width: 10px;
+    height: 10px;
+    animation-delay: 0s;
+}
+
+.signal-wave-2 {
+    width: 16px;
+    height: 16px;
+    animation-delay: 0.3s;
+}
+
+.signal-wave-3 {
+    width: 22px;
+    height: 22px;
+    animation-delay: 0.6s;
+}
+
+@keyframes wave-animation {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+    40% {
+        opacity: 0.8;
+    }
+    80%, 100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+}
+
+.connection-status-text {
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* Status variants */
+.connection-status-container.connected {
+    background-color: rgba(76, 175, 80, 0.2);
+    border: 1px solid rgba(76, 175, 80, 0.5);
+}
+
+.connection-status-container.connecting {
+    background-color: rgba(255, 152, 0, 0.2);
+    border: 1px solid rgba(255, 152, 0, 0.5);
+}
+
+.connection-status-container.disconnected {
+    background-color: rgba(244, 67, 54, 0.2);
+    border: 1px solid rgba(244, 67, 54, 0.5);
+}
+
+.connected .signal-wave-1,
+.connected .signal-wave-2,
+.connected .signal-wave-3 {
+    border-color: #4CAF50;
+}
+
+.connecting .signal-wave-1,
+.connecting .signal-wave-2,
+.connecting .signal-wave-3 {
+    border-color: #FF9800;
+}
+
+.disconnected .signal-wave-1,
+.disconnected .signal-wave-2,
+.disconnected .signal-wave-3 {
+    border-color: #F44336;
+    animation: none;
+    opacity: 0;
+}
+
+.connected .connection-status-text {
+    color: #4CAF50;
+}
+
+.connecting .connection-status-text {
+    color: #FF9800;
+}
+
+.disconnected .connection-status-text {
+    color: #F44336;
+}
+
+/* Demo mode indicator */
+.demo-mode-badge {
+    background-color: #673AB7;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: bold;
+    margin-left: 8px;
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+}

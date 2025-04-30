@@ -1,0 +1,379 @@
+/* H4N5VS Mikrotik System Security
+ * Main Stylesheet
+ */
+
+body {
+    font-size: .875rem;
+}
+
+.feather {
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
+}
+
+/*
+ * Sidebar
+ */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100; /* Behind the navbar */
+    padding: 48px 0 0; /* Height of navbar */
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+@media (max-width: 767.98px) {
+    .sidebar {
+        top: 5rem;
+    }
+}
+
+.sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+    .sidebar-sticky {
+        position: -webkit-sticky;
+        position: sticky;
+    }
+}
+
+.sidebar .nav-link {
+    font-weight: 500;
+    color: #333;
+}
+
+.sidebar .nav-link .feather {
+    margin-right: 4px;
+    color: #999;
+}
+
+.sidebar .nav-link.active {
+    color: #007bff;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+    color: inherit;
+}
+
+.sidebar-heading {
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+
+/*
+ * Navbar
+ */
+
+.navbar-brand {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, .25);
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+}
+
+.navbar .navbar-toggler {
+    top: .25rem;
+    right: 1rem;
+}
+
+.navbar .form-control {
+    padding: .75rem 1rem;
+    border-width: 0;
+    border-radius: 0;
+}
+
+.form-control-dark {
+    color: #fff;
+    background-color: rgba(255, 255, 255, .1);
+    border-color: rgba(255, 255, 255, .1);
+}
+
+.form-control-dark:focus {
+    border-color: transparent;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}
+
+/*
+ * Custom Styles
+ */
+
+/* Dashboard cards */
+.card {
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.card-header {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.card-header .feather {
+    margin-right: 5px;
+}
+
+/* Stats card */
+.stat-card {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.stat-card .stat-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.stat-card .stat-value {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.stat-card .stat-label {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* Status badges */
+.status-badge {
+    display: inline-block;
+    padding: 0.25em 0.6em;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 10rem;
+}
+
+.bg-success-light {
+    background-color: rgba(40, 167, 69, 0.2);
+    color: #28a745;
+}
+
+.bg-danger-light {
+    background-color: rgba(220, 53, 69, 0.2);
+    color: #dc3545;
+}
+
+.bg-warning-light {
+    background-color: rgba(255, 193, 7, 0.2);
+    color: #ffc107;
+}
+
+.bg-info-light {
+    background-color: rgba(23, 162, 184, 0.2);
+    color: #17a2b8;
+}
+
+/* Log list */
+.log-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.log-item {
+    padding: 8px 10px;
+    border-left: 3px solid transparent;
+    margin-bottom: 5px;
+}
+
+.log-item.log-danger {
+    border-left-color: #dc3545;
+    background-color: rgba(220, 53, 69, 0.05);
+}
+
+.log-item.log-warning {
+    border-left-color: #ffc107;
+    background-color: rgba(255, 193, 7, 0.05);
+}
+
+.log-item.log-info {
+    border-left-color: #17a2b8;
+    background-color: rgba(23, 162, 184, 0.05);
+}
+
+.log-item.log-success {
+    border-left-color: #28a745;
+    background-color: rgba(40, 167, 69, 0.05);
+}
+
+.log-time {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+/* Connection list */
+.connection-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Chart containers */
+.chart-container {
+    position: relative;
+    margin: auto;
+    height: 250px;
+}
+
+/* Login and configuration page styles */
+.login-container, .config-container {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #f5f5f5;
+    height: 100vh;
+}
+
+.login-card, .config-card {
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.form-signin .checkbox {
+    font-weight: 400;
+}
+
+.form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+
+.form-signin input[type="text"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+/* Firewall rule styles */
+.rule-item {
+    border-left: 3px solid transparent;
+    padding: 10px;
+    margin-bottom: 5px;
+    transition: all 0.2s ease;
+}
+
+.rule-item:hover {
+    background-color: rgba(0,0,0,0.03);
+}
+
+.rule-item.rule-allow {
+    border-left-color: #28a745;
+}
+
+.rule-item.rule-drop {
+    border-left-color: #dc3545;
+}
+
+.rule-item.rule-reject {
+    border-left-color: #f0ad4e;
+}
+
+.rule-item.rule-log {
+    border-left-color: #17a2b8;
+}
+
+/* Traffic meter */
+.traffic-meter {
+    height: 8px;
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #e9ecef;
+}
+
+.traffic-meter-bar {
+    height: 100%;
+    background-color: #007bff;
+    transition: width 0.5s ease;
+}
+
+/* Progress styles */
+.progress-bar-animated {
+    animation: progress-bar-stripes 1s linear infinite;
+}
+
+@keyframes progress-bar-stripes {
+    from {
+        background-position: 1rem 0;
+    }
+    to {
+        background-position: 0 0;
+    }
+}
+
+/* Threat detection */
+.threat-alert {
+    border-left: 5px solid #dc3545;
+    background-color: rgba(220, 53, 69, 0.05);
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.mitigation-section {
+    background-color: rgba(0,0,0,0.02);
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding: 10px 15px;
+    margin-top: 10px;
+}
+
+.mitigation-title {
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.mitigation-action {
+    font-family: monospace;
+    padding: 5px;
+    background-color: rgba(0,0,0,0.03);
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
